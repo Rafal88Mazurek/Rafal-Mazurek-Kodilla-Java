@@ -1,18 +1,31 @@
-package com.kodilla;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
-public class Calculator {
-    public static void main(String[] args) {
-        System.out.println("Wynik dodawania licz A i B to: " + addAToB(10, 6));
-        System.out.println("Wynik odejmowania liczb A i B to: " + subtractAFromB(14, 5));
+public class QuantityOfA {
+    public static String aQuantity(int number) {
+        String result = "";
+        for(int i = 0 ; i < number; i++) {
+            result += "a" ;
+        }
+        return result;
     }
+    public  static void main (String[] args) {
 
-    static int addAToB(int a, int b) {
-        return a + b;
-    }
+        ArrayDeque<String> quantityOfA = new ArrayDeque<>();
+        Random generator = new Random();
+        for(int i = 0; i <= 50; i++) {
+            int chosenNumber = generator.nextInt(50)+1;
+            String choosenString = aQuantity(chosenNumber);
+            quantityOfA.add(choosenString);
 
-    static int subtractAFromB(int a, int b) {
-        return a - b;
+        }
+        System.out.println(quantityOfA);
     }
 
 }
-
+class SplitOfA {
+    ArrayList<String> even = new ArrayList<>();
+    ArrayList<String> odd = new ArrayList<>();
+    public
+}
